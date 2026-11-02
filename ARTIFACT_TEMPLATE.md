@@ -1,6 +1,6 @@
 # Professional artifact information
 
-The five artifact slots on the website are intentionally blank. Use the supplied Professional Portfolio Artifact Template when you add real artifacts. Public projects are presented separately and are not counted as artifacts.
+Artifact 1 is the AIML-500 Study Companion AI Lab case study. Slots 2–5 are intentionally blank. Use the supplied Professional Portfolio Artifact Template when you add more artifacts. Public projects are presented separately and are not counted as artifacts.
 
 For each artifact, complete:
 
