@@ -1,6 +1,6 @@
 # Professional artifact information
 
-Artifact 1 is the AIML-500 Study Companion AI Lab case study. Slots 2–5 are intentionally blank. Use the supplied Professional Portfolio Artifact Template when you add more artifacts. Public projects are presented separately and are not counted as artifacts.
+Artifact 1 is the AIML-500 Study Companion AI Lab case study. Artifact 2 is the Workshop 2.3 comparative report on machine learning and deep learning. Slots 3–5 are intentionally blank. Use the supplied Professional Portfolio Artifact Template when you add more artifacts. Public projects are presented separately and are not counted as artifacts.
 
 For each artifact, complete:
 
