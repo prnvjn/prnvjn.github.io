@@ -1,0 +1,6 @@
+:HL["/artifacts/ai-literacy/_next/static/chunks/3tt0ptvfslnp8.css","style"]
+:HL["/assets/style.css","style"]
+:HL["/assets/artifact.css","style"]
+2:[["children",{"s":"__PAGE__","h":160}]]
+1:[["children",{"s":"/_not-found","h":96,"c":"$Q2"}]]
+0:{"b":"pzwrzLJt26kIAsEHk6f-b","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
