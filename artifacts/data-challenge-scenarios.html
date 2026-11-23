@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#101713">
+  <title>Data Challenge Scenarios — Pranav Jain</title>
+  <meta name="description" content="Auditing sentiment labels, evaluating a hiring pilot, and protecting patient data in a federated learning study.">
+  <meta property="og:title" content="Data Challenge Scenarios — Pranav Jain">
+  <meta property="og:description" content="Auditing sentiment labels, evaluating a hiring pilot, and protecting patient data in a federated learning study.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://prnvjn.github.io/artifacts/data-challenge-scenarios.html">
+  <link rel="canonical" href="https://prnvjn.github.io/artifacts/data-challenge-scenarios.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/artifact.css">
+  <script src="../assets/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="../index.html#home" aria-label="Pranav Jain, home"><span class="monogram" aria-hidden="true">pj<span>↗</span></span><span>pranav jain<span class="wordmark-dot">.</span></span></a>
+    <nav class="navigation" id="navigation" aria-label="Main navigation"><a href="../index.html#about">About</a><a href="../index.html#projects">Projects</a><a href="../index.html#artifacts" aria-current="page">Artifacts</a><a class="nav-contact" href="../index.html#contact">Let’s connect <span aria-hidden="true">↗</span></a></nav>
+    <div class="header-actions"><button class="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch to light theme"><svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 1v3m0 16v3M1 12h3m16 0h3M4.2 4.2l2.1 2.1m11.4 11.4 2.1 2.1M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></button><button class="menu-toggle" type="button" aria-controls="navigation" aria-expanded="false">Menu <span aria-hidden="true">+</span></button></div>
+  </header>
+  <main id="main">
+    <div class="artifact-hero section-wrap">
+      <a class="artifact-breadcrumb" href="../index.html#artifacts"><span aria-hidden="true">←</span> Back to the artifact collection</a>
+      <div class="artifact-hero-grid">
+        <div>
+          <p class="eyebrow">ARTIFACT 04 / RESPONSIBLE MACHINE LEARNING / CASE STUDY</p>
+          <h1>Data Challenge <span class="serif">Scenarios.</span></h1>
+          <p class="artifact-lead">Auditing sentiment labels, evaluating a hiring pilot, and protecting patient data in a federated learning study.</p>
+        </div>
+        <dl class="artifact-facts">
+          <div><dt>CREATOR</dt><dd>Pranav Jain · individual exercise</dd></div>
+          <div><dt>CONTEXT</dt><dd>AI-guided practice</dd></div>
+          <div><dt>FORMAT</dt><dd>Case study and reflection</dd></div>
+          <div><dt>EVIDENCE</dt><dd>Three fictional scenarios</dd></div>
+        </dl>
+      </div>
+    </div>
+    <div class="artifact-content artifact-content-compact section-wrap">
+      <article class="artifact-prose" aria-label="Data Challenge Scenarios">
+        <section id="introduction">
+          <h2>Introduction</h2>
+          <p>I chose this exercise for my portfolio because it shows how I evaluate the data and assumptions behind a machine learning system. I worked through three fictional cases covering sentiment labels, résumé screening, and collaboration between hospitals.</p>
+        </section>
+        <section id="description">
+          <h2>Artifact Description</h2>
+          <p>I proposed a decision for each case and refined it in response to follow-up questions from an AI coach. The case notes below document my proposed workflows and validation plans.</p>
+        </section>
+        <section id="case-notes">
+          <h2>Case Notes</h2>
+          <h3>ReviewPulse · Audit candidate sentiment labels</h3>
+          <p>I proposed a repeatable cleaning pipeline that started with one-star and five-star reviews as candidate negative and positive examples. To test those labels, I proposed randomly sampling 100 reviews from each confidently labeled group, hiding the ratings and pipeline labels, and asking reviewers to judge the text. I would report the confirmation and uncertainty rates for each group, keeping uncertain cases in the denominator. The audit would measure agreement for the two extreme ratings.</p>
+          <h3>TalentBridge · Test whether the hiring model transfers</h3>
+          <p>I began by comparing hiring needs across deployment settings. The follow-up brought out a risk even when roles are similar. Qualified applicants may use local credentials the model rarely saw. I proposed using local reviewers’ job criteria to examine where the model and reviewers disagreed, then running a limited pilot with a third reviewer to assess those disagreements.</p>
+          <h3>Riverbend and Lakeside · Collaborate without moving raw records</h3>
+          <p>I proposed a federated learning pilot with shared diagnosis definitions, code mappings checked at both hospitals, and patient records kept on-site. Each hospital would evaluate the shared model on recent held-out records against its own local baseline, checking missed diagnoses, false alarms, and calibration across sites and patient groups. I included access controls, audit logs, retention rules, and incident response. If either hospital saw more missed diagnoses, I would investigate before expanding.</p>
+        </section>
+        <section id="value">
+          <h2>Artifact-Specific Value Proposition</h2>
+          <p>This exercise shows how I turn concerns about labels, representation, and privacy into questions a team can test. It also shows how I use independent review to check decisions before relying on a model at scale.</p>
+        </section>
+        <section id="audience">
+          <h2>Customization for Audience</h2>
+          <p>I organized the cases around decisions and validation methods so instructors, technical recruiters, and applied ML teams can follow what I proposed and what evidence I would collect.</p>
+        </section>
+        <section id="reflection">
+          <h2>Reflection</h2>
+          <p>This exercise showed me where my intuition was well grounded and where I needed to be more specific. The highest and lowest ratings gave me a starting point for candidate labels. Hiding those ratings from reviewers was the more important decision, along with reporting uncertainty and keeping those cases in the count.</p>
+          <p>Bias and privacy were harder. A model can miss credentials that matter locally, even for similar roles. A limited pilot with local human review and a third reviewer could help explain where the model’s choices diverge from reviewers’ recommendations. In the hospital case, federated learning with local validation fit the collaboration, and I identified that model updates could still leak information in a small two-site pilot.</p>
+          <p>I can outline safeguards, but I still need to specify what evidence would halt a pilot. For the hiring case, I would agree upfront on how large a gap in rejection rates among equally qualified applicants across credential groups would trigger a pause, and who would make that call.</p>
+        </section>
+        <section id="feedback">
+          <h2>Feedback and Revisions</h2>
+          <p>The coach asked what one hospital could infer if it knew its own update and saw the exact combined update. I revised my plan so the hospitals would receive neither exact per-round aggregates nor checkpoints that revealed them. I proposed a trusted coordinator, an upfront privacy budget, and release of a model with patient-level differential privacy, subject to checking whether it still improved on local baselines, including for smaller patient groups.</p>
+        </section>
+        <section id="references">
+          <h2>References</h2>
+          <ul>
+            <li>Data Challenge Scenarios Coach · fictional scenario prompts and follow-up questions</li>
+          </ul>
+        </section>
+        <div class="artifact-page-end">
+          <a class="text-link" href="../index.html#artifacts"><span aria-hidden="true">←</span> Back to all artifacts</a>
+          <p>Artifact 04 · Pranav Jain</p>
+        </div>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer section-wrap"><p>© <span id="year">2026</span> Pranav Jain</p><p>Built with care. Hosted on GitHub Pages.</p><a href="../index.html#home">Portfolio home <span aria-hidden="true">↗</span></a></footer>
+</body>
+</html>

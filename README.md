@@ -2,7 +2,7 @@
 
 Live site: https://prnvjn.github.io/
 
-A responsive, static portfolio built with HTML, CSS, and a small amount of JavaScript. It includes a professional bio, personal value proposition and audience, public projects, the AIML-500 Study Companion as Artifact 1, a machine learning comparative report as Artifact 2, the AI Literacy Lab certificate as Artifact 3, two empty artifact slots, and contact links. The structure follows the supplied Professional Portfolio Artifact Template.
+A responsive, static portfolio built with HTML, CSS, and a small amount of JavaScript. It includes a professional bio, personal value proposition and audience, public projects, the AIML-500 Study Companion as Artifact 1, a machine learning comparative report as Artifact 2, the AI Literacy Lab certificate as Artifact 3, and contact links. The collection also includes the Data Challenge Scenarios case study as Artifact 4. The structure follows the supplied Professional Portfolio Artifact Template.
 
 ## Edit the site
 
